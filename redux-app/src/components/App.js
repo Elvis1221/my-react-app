@@ -11,10 +11,10 @@ export const App = () => {
 
   return (
     <div className="app-wrapper">
-      <NavBar/>
+      <NavBar />
       <div className='app-wrapper-content'>
         <Route path='/Form'
-               render={() => <FormPage/>}/>
+               render={() => <FormPage />}/>
         <Route path='/Cards'
                render={() => <CardPage/>}/>
       </div>
