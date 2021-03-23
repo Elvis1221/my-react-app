@@ -1,16 +1,15 @@
 const MESSAGES = "MESSAGES";
 
 const initialState = {
-  post: [],
+  posts: [],
 };
 
-
-export const addMessagesReduser = (state = initialState, {type,payload}) => {
+export const addMessagesReducer = (state = initialState, {type, payload}) => {
   switch (type) {
     case MESSAGES:
       return {
-        post: [
-          ...state.post,
+        posts: [
+          ...state.posts,
           payload
         ]
       };
@@ -19,6 +18,5 @@ export const addMessagesReduser = (state = initialState, {type,payload}) => {
       return state
   }
 };
-
 
 export const addMessagesAC = (payload) => ({type: MESSAGES, payload});

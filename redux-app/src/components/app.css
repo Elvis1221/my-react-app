@@ -1,0 +1,31 @@
+.app-wrapper {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    grid-template-rows: 12fr;
+
+
+}
+
+.app-wrapper-content {
+    border: 1px solid green;
+    margin-left: 10px;
+
+}
+.wrapper-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid red;
+
+}
+
+.btn {
+    margin: 20px;
+}
+
+
+
+

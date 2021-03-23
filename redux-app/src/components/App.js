@@ -1,51 +1,22 @@
-import React, {useState} from 'react'
-import {Counter} from "./Counter";
-import {useDispatch, useSelector} from "react-redux";
-import {addCountDecAC, addCountInkAC} from "../reducers/countReduser";
-import {Buttons} from "./Buttons";
-import {addMessagesAC} from "../reducers/addMessagesReduser";
+import React from 'react'
+import {Route} from "react-router-dom";
 
+import {FormPage} from "./FormPage";
+import {NavBar} from "./nav-bar/NavBar";
+import {CardPage} from "./CardsPage";
+
+import "./App.css"
 
 export const App = () => {
-  const dispatch = useDispatch();
-  const {count, addMessage} = useSelector(state => state);
-
-  const [message, setMessage] = useState("")
-
-  const addCountLike = () => {
-    dispatch(addCountInkAC(count.like + 1))
-  };
-  const addCountDizLike = () => {
-    dispatch(addCountDecAC(count.dislike - 1))
-  };
-  const addMessages = () => {
-    const newMessage = {post: message};
-    dispatch(addMessagesAC(newMessage))
-  };
-  const newMessage = (event => setMessage(event.target.value));
 
   return (
-    <div>
-      <Counter addLike={count.like} addDislike={count.dislike}/>
-      <Buttons addCountDizLike={addCountDizLike} addCountLike={addCountLike}/>
-      <div>
-        <>
-          {
-            addMessage.post.map(({post}) => (
-              <div>
-                <div>{post}</div>
-                {addMessages}
-                {newMessage}
-
-
-
-              </div>
-            ))
-          }
-        </>
-        <input type="text" onChange={newMessage}/>
-        <button onClick={addMessages}>add</button>
-
+    <div className="app-wrapper">
+      <NavBar/>
+      <div className='app-wrapper-content'>
+        <Route path='/Form'
+               render={() => <FormPage/>}/>
+        <Route path='/Cards'
+               render={() => <CardPage/>}/>
       </div>
 
     </div>
