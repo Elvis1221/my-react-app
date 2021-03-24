@@ -1,0 +1,31 @@
+.wrapper-card {
+    width: 28%;
+    margin: 20px;
+}
+
+.app-wrapper-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.change-card {
+    align-items: center;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.wrapper-card img {
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.content-text {
+    max-width: 100%;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+}
+

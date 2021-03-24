@@ -18,13 +18,14 @@ const navigationData = [
 
 export const NavBar = () => {
   return (
-    <div>
+    <div className="wrapper-nav-bar">
       {
         navigationData.map((item, index) =>
           <div key={index} className="nav-bar">
             <NavLink
               to={item.path}
               children={item.title}
+              className="nav-title"
             />
           </div>
         )
