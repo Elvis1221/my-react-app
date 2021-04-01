@@ -8,14 +8,15 @@ import {PageCards} from "./CardsPage";
 import {pageFormReducerAC} from "../reducers/FormReducer";
 
 import "./App.css"
+import {PageReviews} from "./PageReviews";
 
 export const App = () => {
   const dispatch = useDispatch();
   const {form} = useSelector(state => state.pageForm);
 
-  const [price, setPrice] = useState('');
-  const [img, setImg] = useState('');
-  const [description, setDescription] = useState('');
+  const [price, setPrice] = useState("");
+  const [img, setImg] = useState("");
+  const [description, setDescription] = useState("");
 
   const newPageForm = () => {
     const formFields = (
@@ -45,7 +46,11 @@ export const App = () => {
                                                                    img={items.img}
                                                                    description={items.description}/>)}
         />
+        <Route path='/Reviews'
+               render={() => <PageReviews />}
+        />
       </div>
     </div>
   )
 };
+

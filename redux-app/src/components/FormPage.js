@@ -39,7 +39,7 @@ export const PageForm = ({price, img, description, addPageForm}) => {
              placeholder="Цена:"
              onChange={price}
       />
-      <button type="button" className="btn btn-secondary margin-btn" onClick={addPageForm}>Отправить</button>
+      <button type="button" className="btn btn-secondary margin-btn" onClick={addPageForm}>Добавить</button>
     </div>
   )
 };
